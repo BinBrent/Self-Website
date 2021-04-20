@@ -1,0 +1,173 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+ul
+{
+	margin: 0;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+header
+{
+	background-color: #0a110a;
+}
+
+header ::after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+nav
+{
+	background: #0a110a;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right:0px;
+	z-index: 99999;
+}
+
+nav ul
+{
+	list-style: none;
+	margin: 0;
+	float: right;
+}
+
+nav ul ::after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+nav ul li, nav .logo
+{
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+}	
+
+.logo
+{
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-family: 'gravualbold'!important;
+	text-decoration: none;
+}
+
+.loginButton
+{
+	display: inline-block;
+  	border-radius: 4px;
+  	background-color: transparent;
+  	border: none;
+	color :#FFFFFF;
+  	text-align: center;
+  	font-size: 20px;
+  	padding: 10px;
+  	width: 120px;
+  	transition: all 0.5s;
+  	cursor: pointer;
+}
+
+.loginButton:hover 
+{
+	background-color: #F7971E;
+	color: black;
+}
+
+#banner
+{
+	background: transparent;
+	padding: 110px 0 39px 0;
+}
+
+#banner ::after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#banner .inner
+{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.inner ::after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#banner .inner h1
+{
+	margin: 0;
+	color: #fff;
+}
+
+#banner .inner img
+{
+	max-width: 100%;
+}
+
+.sub-heading
+{
+	line-height: 30px;
+	margin: 36px 0;
+	font-size: 22px;
+	color:#F7971E;
+	letter-spacing: 1px;
+}
+
+footer
+{
+	background: #333;
+	color: #fff;
+	text-align: center;
+}
+
+footer ul li
+{
+	color: #fff;
+	border-style: ridge;
+	background-color:seagreen;
+}
+
+footer ul li a
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+ul.share-group
+{
+	display: block;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+.share-group li
+{
+	display: inline-block;
+	padding: 10px;
+}
+
+.copy
+{
+	padding-bottom: 30px;
+}
+
