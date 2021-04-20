@@ -261,7 +261,11 @@ p {
 }
 
 
-
+.cardImg {
+	display: block;
+	margin: 30px auto;
+	border-radius: 18px;
+}
 
 .purple-section {
 	padding: 80px;
@@ -278,20 +282,16 @@ p {
 	width: 100%;
 }
 
-/*.cardImg
-{
-
-}*/
-
 .card {
-	float: left;
-	width: 50%;
+	display: inline-block;
+	width: 49%;
 	min-height: 300px;
-	padding: 50px;
+	padding: 30px;
+	overflow: auto;
 	-webkit-box-sizing: border-box;
 	-mon-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 }
 
 .card:first-child {
