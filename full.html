@@ -10,7 +10,7 @@
         content="width = device-width; initial-scale = 1.0; maximum-scale = 1.0; user-scalable = 0;">
     <title>BXXB--55190430</title>
     <link rel="stylesheet" href="css/fullsheet.css">
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>-->
     <script>
         function getQueryString(key) {
             var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
@@ -23,7 +23,7 @@
         function isEmpty() {
             var obj = document.getElementsByName("good");
             var check_val = [];
-            url = "jsp/cart.jsp?";
+            url = "jsp/addCart.jsp?";
             url = url + "name=" + getQueryString("name") + "&";
             for (k in obj) {
                 if (obj[k].checked) {
@@ -39,6 +39,15 @@
             window.location.href = url;
         }
     </script>
+
+    <script>
+        function goCart() {
+            url = "jsp/showCart.jsp?";
+            url = url + "name=" + getQueryString("name");
+            window.location.href = url;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -151,7 +160,10 @@
                         <div class="sub-heading">
                             物美价廉，童叟无欺
                         </div>
-                        <input type="button" value="添加到购物车" class="showCart" onclick="isEmpty()">
+                        <div>
+                            <input type="button" value="添加到购物车" class="showCart" onclick="isEmpty()">
+                            <input type="button" value="查看购物车" class="showCart" onclick="goCart()"></input>
+                        </div>
                     </div>
                     <div class="card-group 
                 clearfix">
