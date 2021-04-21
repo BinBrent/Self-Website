@@ -7,6 +7,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    
+    <script>
+        function reLogin() {
+            alert("信息输入错误,请重新登录");
+            window.location.href = "../loginPage.html";
+        }
+    </script>
+
 </head>
 <body>
 
@@ -53,7 +61,7 @@
                     addr += name;
                     response.sendRedirect(addr);
                 } else {
-                    response.sendRedirect("../loginPage.html");
+                    out.println("<script>reLogin();</script>");
                 }
             } catch (Exception e) {
                 out.print("操作结束，但是还是失败了"); 

@@ -7,6 +7,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <script>
+        function conflictName() {
+            alert("用户名已被注册");
+            window.location.href = "../logupPage.html";
+        }
+    </script>
+
+    <script>
+        function goLogin() {
+            alert("注册成功，请登录");
+            window.location.href = "../loginPage.html";
+        }
+    </script>
+
 </head>
 <body>
 
@@ -24,26 +38,20 @@
             String username = "root";  //数据库用户名
             String password = "123456";  //数据库用户密码
             conn = DriverManager.getConnection(url, username, password);  //连接状态
-            if(conn != null) {      
-                
-                if (pwd.equals(confirmPwd)) {
-                    String sql = "SELECT * FROM user where username = ?";  //查询语句
+            if(conn != null) {                      
+                String sql = "SELECT * FROM user where username = ?";  //查询语句
+                pre = conn.prepareStatement(sql);
+                pre.setString(1, name);
+                rs = pre.executeQuery();
+                if (rs.next()) {
+                    isValid = false;
+                } else {
+                    sql = "INSERT INTO user(username, password) VALUES(?, ?)";
                     pre = conn.prepareStatement(sql);
                     pre.setString(1, name);
-                    rs = pre.executeQuery();
-                    if (rs.next()) {
-                        isValid = false;
-                    } else {
-                        sql = "INSERT INTO user(username, password) VALUES(?, ?)";
-                        pre = conn.prepareStatement(sql);
-                        pre.setString(1, name);
-                        pre.setString(2, pwd);
-                        pre.executeUpdate();// 执行
-                    }
-                } else {
-                    isValid = false;
+                    pre.setString(2, pwd);
+                    pre.executeUpdate();// 执行
                 }
-                
             }
             else{  
                 out.print("连接失败！"); 
@@ -60,9 +68,9 @@
                 if (conn != null)
                     conn.close();
                 if (isValid) 
-                    response.sendRedirect("../loginPage.html");
+                    out.println("<script>goLogin();</script>");
                 else
-                    response.sendRedirect("../logupPage.html");
+                    out.println("<script>conflictName();</script>");
             } catch (Exception e) {
                 out.print("操作结束，但是还是失败了"); 
             }

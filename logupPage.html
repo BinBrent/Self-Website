@@ -6,7 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/log.css">
-
+    <script type="text/javascript">
+        function conflictPwd() {
+            var pwd = document.getElementById("password").value;
+            var cfpwd = document.getElementById("confirmPassword").value;
+            if (pwd == cfpwd) {
+                return true;
+            }
+            else {
+                alert("两次密码不一致");
+                return false;
+            }
+        }
+    </script>
     <title>注册查看VIP内容</title>
 
 </head>
@@ -18,17 +30,17 @@
             <div class="container">
                 <div class="form">
                     <h2>注册</h2>
-                    <form name="login" action="jsp/log_up.jsp" method="POST">
+                    <form name="login" onsubmit="return conflictPwd()" action="jsp/log_up.jsp" method="POST">
                         <div class="inputBox">
-                            <input type="text" name="username" placeholder="Username" required>
+                            <input type="text" name="username" id="username" placeholder="Username" required>
                         </div>
 
                         <div class="inputBox">
-                            <input type="password" name="password" placeholder="Password" required>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
                         </div>
 
                         <div class="inputBox">
-                            <input type="password" name="confirmPassword" placeholder="confirmPassword" required>
+                            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" required>
                         </div>
 
                         <div class="inputBox">
