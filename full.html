@@ -23,15 +23,20 @@
         function isEmpty() {
             var obj = document.getElementsByName("good");
             var check_val = [];
+            url = "jsp/cart.jsp?";
+            url = url + "name=" + getQueryString("name") + "&";
             for (k in obj) {
-                if (obj[k].checked)
+                if (obj[k].checked) {
                     check_val.push(obj[k].value);
+                    url = url + "good=" + obj[k].value + "&";
+                }
             }
             if (check_val.length == 0) {
                 alert("未选中商品");
-                return false;
+                return ;
             }
-            return true;
+            url = url.slice(0, url.length - 1);
+            window.location.href = url;
         }
     </script>
 </head>
@@ -139,14 +144,14 @@
         <section class="purple-section">
             <div class="wrapper">
 
-                <form action="jsp/cart.jsp"   onsubmit="return isEmpty()">
+                <form name="cart">
                     <div class="heading-wrapper">
                         <h2>欢迎来到小卖部</h2>
                         <div class="hr"></div>
                         <div class="sub-heading">
                             物美价廉，童叟无欺
                         </div>
-                        <input type="submit" value="添加到购物车" class="showCart">
+                        <input type="button" value="添加到购物车" class="showCart" onclick="isEmpty()">
                     </div>
                     <div class="card-group 
                 clearfix">
