@@ -291,6 +291,23 @@ p {
 	/*border: 1px solid white;*/
 }
 
+.showCart {
+	display: block;
+	margin: 30px auto;
+	border-radius: 4px;
+	background-color: #F5F5F5;
+	border: none;
+	color: #0a110a;
+	text-align: center;
+	padding: 10px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.showCart:hover {
+	background-color: #F7971E;
+	color: black;
+}
 
 .cartButton {
 	display: block;

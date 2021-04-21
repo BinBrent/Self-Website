@@ -15,8 +15,9 @@
         Connection conn = null;
         PreparedStatement pre = null;
         ResultSet rs = null; 
+        String name = new String((request.getParameter("username")).getBytes("ISO-8859-1"),"UTF-8");
+        String pwd = new String((request.getParameter("password")).getBytes("ISO-8859-1"),"UTF-8");
         try {  
-            
             Class.forName("com.mysql.cj.jdbc.Driver");  //驱动程序名
             String url = "jdbc:mysql://localhost:3306/website_user?&useSSL=false&serverTimezone=UTC"; //数据库名
             String username = "root";  //数据库用户名
@@ -24,8 +25,7 @@
             conn = DriverManager.getConnection(url, username, password);  //连接状态
             if(conn != null) {      
                 String sql = "SELECT * FROM user where username = ? and password = ?";  //查询语句
-                String name = new String((request.getParameter("username")).getBytes("ISO-8859-1"),"UTF-8");
-                String pwd = new String((request.getParameter("password")).getBytes("ISO-8859-1"),"UTF-8");
+                
                 pre = conn.prepareStatement(sql);
                 pre.setString(1, name);
                 pre.setString(2, pwd);
@@ -38,7 +38,6 @@
             else{  
                 out.print("连接失败！"); 
             }  
-            
         }catch (Exception e) {        
             out.print("操作失败");  
         }finally {
@@ -50,7 +49,9 @@
                 if (conn != null)
                     conn.close();
                 if (isValid == true) { 
-                    response.sendRedirect("../full.html");
+                    String addr = "../full.html?name=";
+                    addr += name;
+                    response.sendRedirect(addr);
                 } else {
                     response.sendRedirect("../loginPage.html");
                 }

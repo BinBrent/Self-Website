@@ -11,10 +11,16 @@
     <title>BXXB--55190430</title>
     <link rel="stylesheet" href="css/fullsheet.css">
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        function getQueryString(key) {
+            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+            var result = window.location.search.substr(1).match(reg);
+            return result ? decodeURIComponent(result[2]) : null;
+        }
+    </script>
 </head>
 
 <body>
-
     <!--主包装-->
     <nav>
         <!--导航栏-->
@@ -30,8 +36,6 @@
     </nav>
     <header>
         <!--页眉-->
-
-
         <div id="banner">
             <!--小小slogan-->
             <div class="inner">
@@ -124,52 +128,63 @@
                     <div class="sub-heading">
                         物美价廉，童叟无欺
                     </div>
+                    <button class="showCart">
+                        <p>查看购物车</p>
+                    </button>
                 </div>
-                <div class="card-group 
+                <form>
+                    <div class="card-group 
                 clearfix">
-                    <div class="card">
-                        <h3>手表</h3>
-                        <p>
-                            西铁城手表 
-                            <br />
-                            小蓝针男表光动能小牛皮表带时尚休闲腕表
-                        </p>
-                        <img src="pic/watch.jpg" loading="lazy" class="cardImg"/>
-                        <button class="cartButton"><p>加入购物车</p></button>
+                        <div class="card">
+                            <h3>手表</h3>
+                            <p>
+                                西铁城手表
+                                <br />
+                                小蓝针男表光动能小牛皮表带时尚休闲腕表
+                            </p>
+                            <img src="pic/watch.jpg" loading="lazy" class="cardImg" />
+                            <button class="cartButton">
+                                <p>加入购物车</p>
+                            </button>
+                        </div>
+                        <div class="card">
+                            <h3>威士忌</h3>
+                            <p>
+                                山崎
+                                <br />
+                                威士忌
+                            </p>
+                            <img src="pic/alcohol.jpg" loading="lazy" class="cardImg" />
+                            <button class="cartButton">
+                                <p>加入购物车</p>
+                            </button>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>威士忌</h3>
-                        <p>
-                            山崎
-                            <br />
-                            威士忌
-                        </p>
-                        <img src="pic/alcohol.jpg" loading="lazy" class="cardImg"/>
-                        <button class="cartButton"><p>加入购物车</p></button>
-                    </div>
-                </div>
 
-                <div class="card-group
+                    <div class="card-group
 			clearfix">
-                    <div class="card">
-                        <h3>维生素</h3>
-                        <p>
-                            维生素B1
-                            拯救久经熬夜的身体
-                        </p>
-                        <img src="pic/medicine.jpg" loading="lazy" class="cardImg"/>
-                        <button class="cartButton"><p>加入购物车</p></button>
+                        <div class="card">
+                            <h3>维生素</h3>
+                            <p>
+                                维生素B1
+                                拯救久经熬夜的身体
+                            </p>
+                            <img src="pic/medicine.jpg" loading="lazy" class="cardImg" />
+                            <button class="cartButton">
+                                <p>加入购物车</p>
+                            </button>
+                        </div>
+                        <div class="card">
+                            <h3>骨灰盒</h3>
+                            <p>人生的归宿
+                            </p>
+                            <img src="pic/box.jpg" loading="lazy" class="cardImg" />
+                            <button class="cartButton">
+                                <p>加入购物车</p>
+                            </button>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>骨灰盒</h3>
-                        <p>人生的归宿
-                        </p>
-                        <img src="pic/box.jpg" loading="lazy" class="cardImg"/>
-                        <button class="cartButton"><p>加入购物车</p></button>
-                    </div>
-                </div>
-
-                
+                </form>
             </div>
         </section>
     </div>
