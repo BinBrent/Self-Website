@@ -264,11 +264,12 @@ p {
 .cardImg {
 	display: block;
 	margin: 30px auto;
+	max-width: 90%;
 	border-radius: 18px;
 }
 
 .purple-section {
-	padding: 80px;
+	/*padding: 80px;*/
 	background: #3F3965;
 	color: #fff;
 }
@@ -291,6 +292,7 @@ p {
 	-webkit-box-sizing: border-box;
 	-mon-box-sizing: border-box;
 	box-sizing: border-box;
+	text-align: center;
 	/*border: 1px solid white;*/
 }
 
