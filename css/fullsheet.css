@@ -131,8 +131,8 @@ p {
 }
 
 .green-section {
-	background: #1B0900;
-	/*#16131C#089DB0#0E4DCC #FFD300*/
+	background: black;
+	/*#1B0900(0，151，254)*/
 	color: black;
 	text-align: center;
 	padding: 80px 0;
@@ -140,8 +140,7 @@ p {
 }
 
 .subWrapper {
-	background-color: #68422F;
-	/*#EBEBEB#FFD300*/
+	background-color: #EEBD8E;
 	width: 100%;
 	margin: 0px auto;
 	padding: 80px 0;
@@ -150,8 +149,6 @@ p {
 
 .thirdWrapper {
 	background-color: #EEBD8E;
-	/**/
-	width: 77%;
 	margin: 0 auto;
 }
 
@@ -176,6 +173,7 @@ p {
 	border-style: groove;
 	width: 80%;
 	margin: 0 auto;
+	padding: 40px 0;
 	overflow: auto;
 }
 
@@ -194,11 +192,11 @@ p {
 }
 
 .icon-group {
-	margin: 60px 0;
+	margin: 100px 0;
 }
 
 .wrapper {
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 	overflow: auto;
 	padding: 80px 0;

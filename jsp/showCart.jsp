@@ -21,6 +21,12 @@
                 window.location.href = "../full.jsp?name=" + getQueryString("name");
             }
         </script>
+
+        <style>
+            body {
+                background-color:#F4F4F4;
+            }
+        </style>
     </head>
 
     <body>
@@ -45,18 +51,20 @@
                     rs = pre.executeQuery();
                     while (rs.next())
                         good.add(rs.getString("good"));
+                    out.print("<form>");
                     out.print("<table border='1'>");
-                        for (int i = 0; i < good.size(); i++) {
-                            out.print("<tr>");
-                            out.print("<th>");
-                                out.print(name);
-                            out.print("</th>");
-                            out.print("<th>");
-                                out.print(good.get(i));
-                            out.print("</th>");
-                            out.print("</tr>");
-                        }
+                    for (int i = 0; i < good.size(); i++) {
+                        out.print("<tr>");
+                        out.print("<th>");
+                            out.print(name);
+                        out.print("</th>");
+                        out.print("<th>");
+                            out.print(good.get(i));
+                        out.print("</th>");
+                        out.print("</tr>");
+                    }
                     out.print("</table>");
+                    out.print("</form>");
                 }
                 else{  
                     out.print("连接失败！"); 

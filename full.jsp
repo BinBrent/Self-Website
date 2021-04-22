@@ -246,11 +246,8 @@
                 也看看我的朋友们吧.
             </h1>
             <br />
-            <li><a href="#">item</a></li>
-            <li><a href="#">item</a></li>
-            <li><a href="#">item</a></li>
-            <li><a href="#">item</a></li>
-            <li><a href="#">item</a></li>
+            <li><a href="https://www.jlu.edu.cn/">吉林大学</a></li>
+            <li><a href="http://jlu.openjudge.cn/">吉大OJ</a></li>
         </ul>
 
         <div class="copy">
