@@ -45,10 +45,18 @@
                     rs = pre.executeQuery();
                     while (rs.next())
                         good.add(rs.getString("good"));
-                    for (int i = 0; i < good.size(); i++) {
-                        out.println(good.get(i));
-                        out.print("<table border='1'><tr><th>Month</th><th>Savings</th></tr><tr><td>January</td><td>$100</td></tr></table>");
-                    }
+                    out.print("<table border='1'>");
+                        for (int i = 0; i < good.size(); i++) {
+                            out.print("<tr>");
+                            out.print("<th>");
+                                out.print(name);
+                            out.print("</th>");
+                            out.print("<th>");
+                                out.print(good.get(i));
+                            out.print("</th>");
+                            out.print("</tr>");
+                        }
+                    out.print("</table>");
                 }
                 else{  
                     out.print("连接失败！"); 
