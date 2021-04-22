@@ -18,7 +18,7 @@
         <script type="text/javascript">
             function doneAndReturn() {
                 alert("操作成功");
-                window.location.href = "../full.html?name=" + getQueryString("name");
+                window.location.href = "../full.jsp?name=" + getQueryString("name");
             }
         </script>
     </head>

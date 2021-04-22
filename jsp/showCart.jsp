@@ -18,7 +18,7 @@
         <script type="text/javascript">
             function doneAndReturn() {
                 alert("操作成功");
-                window.location.href = "../full.html?name=" + getQueryString("name");
+                window.location.href = "../full.jsp?name=" + getQueryString("name");
             }
         </script>
     </head>
@@ -45,8 +45,10 @@
                     rs = pre.executeQuery();
                     while (rs.next())
                         good.add(rs.getString("good"));
-                    for (int i = 0; i < good.size(); i++)
+                    for (int i = 0; i < good.size(); i++) {
                         out.println(good.get(i));
+                        out.print("<table border='1'><tr><th>Month</th><th>Savings</th></tr><tr><td>January</td><td>$100</td></tr></table>");
+                    }
                 }
                 else{  
                     out.print("连接失败！"); 

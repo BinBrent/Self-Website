@@ -57,7 +57,7 @@
                 if (conn != null)
                     conn.close();
                 if (isValid == true) { 
-                    String addr = "../full.html?name=";
+                    String addr = "../full.jsp?name=";
                     addr += name;
                     response.sendRedirect(addr);
                 } else {
