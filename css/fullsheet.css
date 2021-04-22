@@ -279,27 +279,15 @@ p {
 	width: 100%;
 }
 
-.card {
-	display: inline-block;
-	width: 49%;
-	min-height: 300px;
-	padding: 30px;
-	overflow: auto;
-	-webkit-box-sizing: border-box;
-	-mon-box-sizing: border-box;
-	box-sizing: border-box;
-	text-align: center;
-}
-
 .showCart {
-	display: inline-block;
+	display: block;
 	margin: 30px auto;
 	border-radius: 4px;
 	background-color: #F5F5F5;
 	border: none;
 	font-size: 18px;
 	color: #0a110a;
-	width: 49%;
+	width: inherit;
 	padding: 10px;
 	transition: all 0.5s;
 	cursor: pointer;
@@ -312,14 +300,15 @@ p {
 
 .cartButton {
 	display: block;
-	margin: 0 auto;
+	margin: 30px auto;
 	border-radius: 4px;
-	background-color: transparent;
+	background-color: #F5F5F5;
 	border: none;
-	color: #FFFFFF;
+	color: #0a110a;
 	text-align: center;
+	font-size: 18px;
 	padding: 10px;
-	max-width: 61.8%;
+	width: inherit;
 	transition: all 0.5s;
 	cursor: pointer;
 }
@@ -329,29 +318,18 @@ p {
 	color: black;
 }
 
-
-.card:first-child {
-	background: rgba(0, 0, 0, 0.04);
-}
-
-.card:nth-child(2) {
+.kid {
+	display: block;
+	width: 61.8%;
+	min-height: 300px;
+	margin: 0 auto;
+	padding: 30px;
+	overflow: auto;
+	-webkit-box-sizing: border-box;
+	-mon-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
 	background: rgba(0, 0, 0, 0.08);
-}
-
-.card:nth-child(3) {
-	background: rgba(0, 0, 0, 0.12);
-}
-
-.card:nth-child(4) {
-	background: rgba(0, 0, 0, 0.16);
-}
-
-.card:nth-child(5) {
-	background: rgba(0, 0, 0, 0.20);
-}
-
-.card:nth-child(6) {
-	background: rgba(0, 0, 0, 0.24);
 }
 
 

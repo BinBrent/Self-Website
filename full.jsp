@@ -155,6 +155,49 @@
             </div>
         </section>
 
+        <%  
+            Connection conn = null;
+            Statement stmt = null;
+            ResultSet rs = null; 
+            String name = new String((request.getParameter("name")).getBytes("ISO-8859-1"),"UTF-8");
+            Vector goodName = new Vector();
+            Vector goodPrice = new Vector();
+            Vector goodPic = new Vector();
+            try {  
+                Class.forName("com.mysql.cj.jdbc.Driver");  //驱动程序名
+                String url = "jdbc:mysql://localhost:3306/website_user?&useSSL=false&serverTimezone=UTC"; //数据库名
+                String username = "root";  //数据库用户名
+                String password = "123456";  //数据库用户密码
+                conn = DriverManager.getConnection(url, username, password);  //连接状态
+                if(conn != null) {
+                    String sql = "SELECT * FROM good";
+                    stmt = conn.createStatement();
+                    rs = stmt.executeQuery(sql);
+                    while (rs.next()) {
+                        goodName.add(rs.getString("name"));
+                        goodPrice.add(rs.getFloat("price"));
+                        goodPic.add(rs.getString("addr"));
+                    }
+                }
+                else{  
+                    out.print("连接失败！"); 
+                }  
+            }catch (Exception e) {        
+                out.print("操作失败");  
+            }finally {
+                try {
+                    if (rs != null)
+                        rs.close();
+                    if (stmt != null)
+                        stmt.close();
+                    if (conn != null)
+                        conn.close();
+                } catch (Exception e) {
+                    out.print("操作结束，但是还是失败了"); 
+                }
+            }  
+        %>
+
         <section class="purple-section">
             <div class="wrapper">
 
@@ -165,53 +208,30 @@
                         <div class="sub-heading">
                             物美价廉，童叟无欺
                         </div>
-                        <div>
-                            <input type="button" value="添加到购物车" class="showCart" onclick="isEmpty()">
                             <input type="button" value="查看购物车" class="showCart" onclick="goCart()">
-                        </div>
                     </div>
-                    <div class="card-group 
-                clearfix">
-                        <div class="card">
-                            <h3>手表</h3>
-                            <p>
-                                西铁城手表
-                                <br />
-                                小蓝针男表光动能小牛皮表带时尚休闲腕表
-                            </p>
-                            <img src="pic/watch.jpg" loading="lazy" class="cardImg" />
-                            <input type="checkbox" name="good" value="watch" />
-                        </div>
-                        <div class="card">
-                            <h3>威士忌</h3>
-                            <p>
-                                山崎
-                                <br />
-                                威士忌
-                            </p>
-                            <img src="pic/alcohol.jpg" loading="lazy" class="cardImg" />
-                            <input type="checkbox" name="good" value="whiskey" />
-                        </div>
-                    </div>
+                        
+                        <%
+                            for (int i = 0; i < goodName.size(); i++) {
+                                out.print("<div class=\"kid\">");
+                                out.print("<h3>");
+                                out.print(goodName.get(i));
+                                out.print("</h3>");
+                                out.println("<br />");
+                                out.print("<h4>￥");
+                                out.print(goodPrice.get(i));
+                                out.print("</h4>");
+                                out.print("<img src=\"");
+                                out.print(goodPic.get(i));
+                                out.print("\" loading=\"lazy\" class=\"cardImg\"/>");
+                                out.print("<input type=\"checkbox\" name=\"good\" value=\"");
+                                out.print(goodName.get(i));
+                                out.print("\" />");
+                                out.print("</div>");
+                            }
+                        %>
 
-                    <div class="card-group
-			clearfix">
-                        <div class="card">
-                            <h3>维生素</h3>
-                            <p>
-                                拯救久经熬夜的身体
-                            </p>
-                            <img src="pic/medicine.jpg" loading="lazy" class="cardImg" />
-                            <input type="checkbox" name="good" value="medicine"/>
-                        </div>
-                        <div class="card">
-                            <h3>骨灰盒</h3>
-                            <p>人生的归宿
-                            </p>
-                            <img src="pic/box.jpg" loading="lazy" class="cardImg"/>
-                            <input type="checkbox" name="good" value="box" />
-                        </div>
-                    </div>
+                        <input type="button" value="添加到购物车" class="cartButton" onclick="isEmpty()">
                 </form>
             </div>
         </section>
