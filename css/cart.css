@@ -1,0 +1,136 @@
+/* 清除浏览器默认边距，
+使边框和内边距的值包含在元素的width和height内 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 使用flex布局，让内容垂直和水平居中 */
+
+section {
+    /* 相对定位 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #F4F6F9;
+}
+
+/* 背景颜色 */
+
+section .color {
+    /* 绝对定位 */
+    position: absolute;
+    /* 使用filter(滤镜) 属性，给图像设置高斯模糊*/
+    filter: blur(200px);
+}
+
+.box {
+    position: relative;
+}
+
+/* 登录框样式 */
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+
+/* 登录标题样式 */
+
+.form h2 {
+    position: relative;
+    color: #6777EF;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+/* 登录标题的下划线样式 */
+
+.form h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0px;
+    height: 3px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.form h2:hover:before {
+    width: 53px;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 输入框样式 */
+
+.form .inputBox input {
+    width: 100%;
+    padding: 10px 20px;
+    background: #FDFDFF;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    border: 1px solid #E4E6FC;
+    border-right: 1px solid #E4E6FC;
+    border-bottom: 1px solid #E4E6FC;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .inputBox input::placeholder {
+    color: #43B9E1;
+    font-size: 14px;
+    letter-spacing: normal;
+}
+
+/* 登录按钮样式 */
+
+.form .inputBox input[type="submit"] {
+    background: #43B9E1;
+    color: #FFFFFF;
+    max-width: 300px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.hide {
+    display: none;
+}
