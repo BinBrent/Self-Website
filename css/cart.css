@@ -54,7 +54,7 @@ section .color {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 50px;
+    padding: 50px 50px 0 50px;
 }
 
 /* 登录标题样式 */
@@ -133,4 +133,25 @@ table {
 
 .hide {
     display: none;
+}
+
+.butt {
+    display: block;
+    border-radius: 4px;
+    background-color: #F4F4F4;
+    border: groove;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 50px auto;
+    padding: 10px;
+    max-width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.butt:hover {
+    background-color: #6777EF;
+    color: black;
 }

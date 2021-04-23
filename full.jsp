@@ -10,8 +10,6 @@
 <head>
     <meta charset="UTF-8">
     <!--定义字符集-->
-    <meta name="keywords" content="HTML,JSP,CSS,SQL">
-    <!--查找关键字-->
     <meta id="meta" name="viewport"
         content="width = device-width; initial-scale = 1.0; maximum-scale = 1.0; user-scalable = 0;">
     <title>BXXB--55190430</title>
@@ -74,7 +72,7 @@
         <div id="banner">
             <!--小小slogan-->
             <div class="inner">
-                <img src="pic/tutor.jpg" />
+                <img src="pic/head.jpg" />
                 <p class="sub-heading">Hello World</p>
             </div>
         </div>

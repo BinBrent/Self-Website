@@ -119,7 +119,12 @@
                                 }  
                             %>   
                         </table>
-                    
+                        <%
+                            out.print("<a class=\"butt\" href=\"../full.jsp?name=");
+                            out.print(name + "\">");
+                                out.print("返回页面");
+                            out.print("</a>");
+                        %>
                     </div>
                 </div>
             </div>

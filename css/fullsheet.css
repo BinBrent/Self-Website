@@ -75,7 +75,7 @@ nav .logo {
 
 #banner {
 	background: transparent;
-	padding: 110px 0 39px 0;
+	padding: 110px 0 52px 0;
 }
 
 #banner ::after {
@@ -107,8 +107,9 @@ nav .logo {
 .sub-heading {
 	line-height: 30px;
 	margin: 36px 0;
-	font-size: 22px;
-	color: #F7971E;
+	font-size: 30px;
+	font-weight: bold;
+	color: #e9f71e;
 }
 
 h2 {
