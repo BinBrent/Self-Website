@@ -89,8 +89,7 @@
                                 <div>
                                     <h2>主页介绍</h2>
                                     <div class="hr"></div>
-                                    <p class="sub-heading">lorem ipsum dolor sit amet,
-                                        consectetur adipisicing elit.</p>
+                                    <p class="sub-heading">尚未摆脱低级趣味的自学者</p>
                                 </div>
                                 <div class="icon-group">
                                     <span class="icon">个人介绍<br /><br />普普通通</span>
@@ -113,10 +112,11 @@
                 <div class="article-text">
                     <div class="text-section">
                         <h2>普普通通的大学生</h2>
-                        <p>Formally established in 1946, the aim is to promote cooperation among countries through
-                            education, science and culture, and contribute to world peace and security. According to
-                            the
-                            introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+                        <p>
+                            从南到北求学
+                            寒冷的冬天一直在提醒着我离家的距离
+                            学成，回家去!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -125,10 +125,13 @@
                 <div class="article-text">
                     <div class="text-section">
                         <h2>简简单单的兴趣爱好</h2>
-                        <p>Formally established in 1946, the aim is to promote cooperation among countries through
-                            education, science and culture, and contribute to world peace and security. According to
-                            the
-                            introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+                        <p>
+                            寒冷的冬天，酒精是个释放压力的好渠道
+                            <br />
+                            和朋友坐在一起喝一杯，烦恼全部烟消云散
+                            <br />
+                            自己有尝试学着调些爱喝的鸡尾酒，效果不错。不过最爱的还是加冰的威士忌，享受冰冷的酒液从喉咙划过留下炙热的感觉
+                        </p>
                     </div>
                 </div>
                 <div class="article-pic">
@@ -143,11 +146,11 @@
                 <div class="article-text">
                     <div class="text-section">
                         <h2>平平凡凡的人生经历</h2>
-                        <p>Formally established in 1946, the aim is to promote cooperation among countries
-                            through
-                            education, science and culture, and contribute to world peace and security.
-                            According to the
-                            introduction, UNESCO has 195 Member States and 58 executive board members.</p>
+                        <p>
+                            把酒拿掉的话，我的人生平平无奇。哪怕是上大学，也只是--"唉，上了吉林大学"
+                            <br />
+                            唯一称得上有趣的也只有高中的毕业旅行，在青海的自然风光里释放自己，图为最美公路
+                        </p>
                     </div>
                 </div>
             </div>

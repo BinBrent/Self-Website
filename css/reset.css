@@ -53,7 +53,7 @@ nav .logo {
 }
 
 .loginButton {
-	display: inline-block;
+	display: block;
 	border-radius: 4px;
 	background-color: transparent;
 	border: none;
@@ -61,6 +61,7 @@ nav .logo {
 	text-align: center;
 	font-size: 20px;
 	padding: 10px;
+	margin: 0 auto;
 	width: 120px;
 	transition: all 0.5s;
 	cursor: pointer;
@@ -73,7 +74,7 @@ nav .logo {
 
 #banner {
 	background: transparent;
-	padding: 110px 0 39px 0;
+	padding: 40px 0 39px 0;
 }
 
 #banner ::after {
@@ -105,8 +106,9 @@ nav .logo {
 .sub-heading {
 	line-height: 30px;
 	margin: 36px 0;
-	font-size: 22px;
-	color: #F7971E;
+	font-size: 30px;
+	font-weight: bolder;
+	color: red;
 	letter-spacing: 1px;
 }
 
