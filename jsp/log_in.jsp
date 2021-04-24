@@ -33,15 +33,12 @@
             conn = DriverManager.getConnection(url, username, password);  //连接状态
             if(conn != null) {      
                 String sql = "SELECT * FROM user where username = ? and password = ?";  //查询语句
-                
                 pre = conn.prepareStatement(sql);
                 pre.setString(1, name);
                 pre.setString(2, pwd);
                 rs = pre.executeQuery();
                 if (rs.next())
-                {
                     isValid = true;
-                }
             }
             else{  
                 out.print("连接失败！"); 

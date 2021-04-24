@@ -23,7 +23,6 @@
 
 </head>
 <body>
-
     <%  
         boolean isValid = true;
         Connection conn = null;
@@ -31,7 +30,6 @@
         ResultSet rs = null; 
         String name = new String((request.getParameter("username")).getBytes("ISO-8859-1"),"UTF-8");
         String pwd = new String((request.getParameter("password")).getBytes("ISO-8859-1"),"UTF-8");
-        String confirmPwd = new String((request.getParameter("confirmPassword")).getBytes("ISO-8859-1"),"UTF-8");
         try {  
             Class.forName("com.mysql.cj.jdbc.Driver");  //驱动程序名
             String url = "jdbc:mysql://localhost:3306/website_user?&useSSL=false&serverTimezone=UTC"; //数据库名

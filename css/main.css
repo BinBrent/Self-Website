@@ -25,19 +25,6 @@ nav {
 	background: #0a110a;
 }
 
-nav ul {
-	list-style: none;
-	margin: 0;
-	float: right;
-}
-
-nav ul ::after {
-	content: '';
-	display: block;
-	clear: both;
-}
-
-nav ul li,
 nav .logo {
 	display: inline-block;
 	margin-top: 15px;
@@ -49,7 +36,6 @@ nav .logo {
 	font-weight: bold;
 	letter-spacing: 1px;
 	font-family: 'gravualbold' !important;
-	text-decoration: none;
 }
 
 .loginButton {
@@ -92,11 +78,6 @@ nav .logo {
 	content: '';
 	display: block;
 	clear: both;
-}
-
-#banner .inner h1 {
-	margin: 0;
-	color: #fff;
 }
 
 #banner .inner img {
