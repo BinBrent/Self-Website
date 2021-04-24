@@ -112,10 +112,12 @@
                 <div class="article-text">
                     <div class="text-section">
                         <h2>普普通通的大学生</h2>
-                        <p>
-                            从南到北求学
-                            寒冷的冬天一直在提醒着我离家的距离
-                            学成，回家去!
+                        <p class="sub-heading">
+                            打工人
+                            <br />
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp做题家
+                            <br />
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp普信男
                         </p>
                     </div>
                 </div>
@@ -125,7 +127,7 @@
                 <div class="article-text">
                     <div class="text-section">
                         <h2>简简单单的兴趣爱好</h2>
-                        <p>
+                        <p class="sub-heading">
                             寒冷的冬天，酒精是个释放压力的好渠道
                             <br />
                             和朋友坐在一起喝一杯，烦恼全部烟消云散
@@ -146,8 +148,10 @@
                 <div class="article-text">
                     <div class="text-section">
                         <h2>平平凡凡的人生经历</h2>
-                        <p>
+                        <p class="sub-heading">
+                            <br />
                             把酒拿掉的话，我的人生平平无奇。哪怕是上大学，也只是--"唉，上了吉林大学"
+                            <br />
                             <br />
                             唯一称得上有趣的也只有高中的毕业旅行，在青海的自然风光里释放自己，图为最美公路
                         </p>
