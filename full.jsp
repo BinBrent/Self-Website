@@ -252,7 +252,10 @@
             </h1>
             <br />
             <li><a href="https://www.jlu.edu.cn/">吉林大学</a></li>
-            <li><a href="http://jlu.openjudge.cn/">吉大OJ</a></li>
+            <li><a href="http://192.168.124.23:8088/8test/NewFile.jsp">55190432王张共</a></li>
+            <li><a href="http://192.168.124.8:8080/display">55190427刘坤明</a></li>
+            <li><a href="http://192.168.124.29:8888/MyWebProject/login.jsp">55190420刘焕龙</a></li>
+
         </ul>
 
         <div class="copy">
